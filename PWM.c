@@ -9,7 +9,7 @@ extern void Configura_Reg_PWM1(uint16_t freq)
     GPIOF_AHB->AFSEL |= 0x0E;
     GPIOF_AHB->PCTL |= (GPIOF_AHB->PCTL&0xFFFF000F) | 0x00006660; /*Combinado con la tabla Pag 1351 y el registro PCTL le digo que es pwm Pag 689*/
     GPIOF_AHB->DEN |= (1<<3)|(1<<2)|(1<<1); /* para decirle si es digital o no Pag 682*/
-    PWM0->CC = (1<<8) | (0x2<<0);  /*Enable o Disable Divisor  Pag 1747*/
+    //PWM0->CC = (1<<8) | (0x2<<0);  /*Enable o Disable Divisor  Pag 1747*/
     PWM0->_0_CTL = (0<<0);
     PWM0->_1_CTL = (0<<0); /*Bloqueo y desbloqueo*/
     PWM0->_1_GENB = 0x0000080C; /*Registro de las acciones del pwm Pag 1285*/
